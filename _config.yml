@@ -3,3 +3,8 @@ title: "Kush Blogs"
 remote_theme: pages-themes/primer
 plugins:
 - jekyll-remote-theme 
+
+permalink: /:year/:month/:day/:title/
+collections:
+  posts:
+    output: true
