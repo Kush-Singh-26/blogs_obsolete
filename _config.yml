@@ -1,1 +1,5 @@
 title: "Kush Blogs"
+
+remote_theme: pages-themes/primer
+plugins:
+- jekyll-remote-theme 
