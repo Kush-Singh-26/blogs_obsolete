@@ -1,9 +1,14 @@
 title: "Kush Blogs"
 
-remote_theme: pages-themes/primer
+remote_theme: jekyll/minima
 plugins:
 - jekyll-remote-theme 
 - jekyll-feed
+
+minima:
+  skin: 'dark'
+
+markdown: kramdown
 
 permalink: /:year/:month/:day/:title/
 collections:
