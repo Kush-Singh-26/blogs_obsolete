@@ -8,3 +8,5 @@ permalink: /:year/:month/:day/:title/
 collections:
   posts:
     output: true
+
+
