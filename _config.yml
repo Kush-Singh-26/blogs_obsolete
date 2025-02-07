@@ -3,10 +3,10 @@ title: "Kush Blogs"
 remote_theme: pages-themes/primer
 plugins:
 - jekyll-remote-theme 
+- jekyll-feed
 
 permalink: /:year/:month/:day/:title/
 collections:
   posts:
     output: true
-
-
+baseurl: "/blogs"
