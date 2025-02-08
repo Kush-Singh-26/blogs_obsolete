@@ -1,0 +1,28 @@
+<style>
+  footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #222;
+    color: #ddd;
+    font-size: 16px;
+  }
+  footer a {
+    color: #4dabf7; /* Light blue */
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  footer a:hover {
+    color: #74c0fc; /* Lighter blue on hover */
+    text-decoration: underline;
+  }
+</style>
+
+<footer>
+  <p>
+    {% for link in site.social_links %}
+      <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+    {% endfor %}
+  </p>
+  
+</footer>
