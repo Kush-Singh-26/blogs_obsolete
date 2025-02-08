@@ -1,20 +1,22 @@
 title: Kush Blog
 email: kush26cs@gmail.com
 
+
 social_links:
   - name: GitHub
     url: "https://github.com/Kush-Singh-26"
 
 baseurl: "" # e.g. /blog if hosted in a subdirectory
-url: "https://kush-singh-26.github.io/blogs/"
+url: "https://kush-singh-26.github.io/blogs/" # Change this to your actual site URL
 github_username: Kush-Singh-26
 
 # Build settings
-remote_theme: jekyll/minima@2.5.2  # Specific version to avoid errors
-
+remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
+  - 
 
 minima:
   skin: dark
+
+
