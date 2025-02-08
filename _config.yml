@@ -6,14 +6,15 @@ social_links:
     url: "https://github.com/Kush-Singh-26"
 
 baseurl: "" # e.g. /blog if hosted in a subdirectory
-url: "https://kush-singh-26.github.io/blogs/" # Change this to your actual site URL
+url: "https://kush-singh-26.github.io/blogs/"
 github_username: Kush-Singh-26
 
 # Build settings
-remote_theme: jekyll/minima
+remote_theme: jekyll/minima@2.5.2  # Specific version to avoid errors
+
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
 
 minima:
   skin: dark
-
