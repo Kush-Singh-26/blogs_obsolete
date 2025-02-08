@@ -6,7 +6,7 @@ social_links:
   - name: GitHub
     url: "https://github.com/Kush-Singh-26"
 
-baseurl: "/blogs" # e.g. /blog if hosted in a subdirectory
+baseurl: "" # e.g. /blog if hosted in a subdirectory
 url: "https://kush-singh-26.github.io/blogs/" # Change this to your actual site URL
 github_username: Kush-Singh-26
 
