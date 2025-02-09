@@ -16,7 +16,7 @@ plugins:
   - jekyll-remote-theme
 
 include:
-  - favicon.png
+  - "favicon.png"
 
 minima:
   skin: dark
