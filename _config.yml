@@ -14,5 +14,9 @@ plugins:
   - jekyll-feed
   - jekyll-remote-theme
 
+favicon: "/favicon.ico"
+head:
+  custom: "<link rel='icon' type='image/x-icon' href='/favicon.ico'>"
+
 minima:
   skin: dark
