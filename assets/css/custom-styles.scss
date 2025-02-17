@@ -1,0 +1,39 @@
+---
+---
+
+/* Make selectors more specific to override any default theme styles */
+.post-content h1, h1 {
+    color: #ff79c6 !important; /* For # headings */
+}
+
+.post-content h2, h2 {
+    color: #8be9fd !important; /* For ## headings */
+}
+
+.post-content h3, h3 {
+    color: #50fa7b !important; /* For ### headings */
+}
+
+.post-content h4, h4 {
+    color: #c792ea !important; /* For ### headings */
+}
+
+blockquote {
+    color: #a9a9b3; /* Duller text color */
+    border-left: 4px solid #6272a4; /* Duller border color */
+    padding-left: 15px;
+    font-style: italic;
+    background-color: #2c2f3a; /* Duller background */
+    padding: 10px 15px;
+    margin: 15px 0;
+}
+
+code.language-plaintext {
+    color: #f1fa8c; /* Text color */
+    background-color: #282a36; /* Background color */
+    padding: 2px 4px; /* Space inside the code block */
+    border-radius: 3px; /* Rounded corners */
+    font-family: Monaco, "Courier New", monospace; /* Monospace font */
+    font-size: 0.9em; /* Slightly smaller text */
+}
+

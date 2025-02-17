@@ -3,5 +3,5 @@ layout: page
 title: About
 permalink: /about/
 ---
-# Hi👋
+## Hi👋
 I'm Kush, a second-year undergraduate student in Computer Science and Engineering. I will be sharing my notes and blogs on various topics I explore.
