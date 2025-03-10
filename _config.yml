@@ -17,6 +17,12 @@ plugins:
 
 include:
   - "favicon.png"
+  - "_tags"
+
+collections:
+  tags:
+    output: true
+    permalink: /tags/:name/
 
 minima:
   skin: dark

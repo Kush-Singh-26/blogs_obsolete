@@ -1,0 +1,58 @@
+---
+---
+
+.tag-cloud {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-link {
+  display: inline-block;
+  background-color: #383a59;
+  color: #8be9fd;
+  padding: 0.25rem 0.75rem;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: #44475a;
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+  
+  &.current-tag {
+    background-color: #6272a4;
+    color: #f8f8f2;
+  }
+}
+
+.tag-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.post-tags {
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.highlighted-tag {
+  color: #ff79c6;
+  font-weight: bold;
+}
+
+.tag-title {
+  color: #ff79c6 !important;
+  margin-bottom: 0.5rem;
+}
+
+.tag-description {
+  margin-bottom: 2rem;
+  font-style: italic;
+  color: #a9a9b3;
+}

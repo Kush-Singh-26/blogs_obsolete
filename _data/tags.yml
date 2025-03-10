@@ -1,0 +1,17 @@
+- name: data-science
+  description: Topics related to data science, data analysis, and statistics
+
+- name: machine-learning
+  description: Machine learning algorithms, techniques, and applications
+
+- name: kaggle
+  description: Tips, tricks, and competitions related to Kaggle
+
+- name: tutorials
+  description: Step-by-step guides and how-to content
+
+- name: databases
+  description: Database systems, design, and management
+
+- name: sql
+  description: SQL queries, database operations, and best practices
