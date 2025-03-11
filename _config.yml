@@ -3,6 +3,10 @@ title: "Kush Blog"
 social_links:
   - name: GitHub
     url: "https://github.com/Kush-Singh-26"
+  - name: Profile
+    url: "https://kush-singh-26.github.io/profile_page/"
+  - name: Blogs Repo
+    url: "https://github.com/Kush-Singh-26/blogs"
 
 baseurl: "/blogs"           # Set to the subdirectory if applicable
 url: "https://kush-singh-26.github.io"  # Root URL of your GitHub Pages
