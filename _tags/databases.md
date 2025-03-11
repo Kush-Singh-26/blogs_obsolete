@@ -1,5 +1,5 @@
 ---
-layout: tag_page
+layout: page
 tag: databases
 permalink: /tags/databases/
 ---

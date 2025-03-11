@@ -1,5 +1,5 @@
 ---
 layout: tag_page
-tag: kaggle
-permalink: /tags/kaggle/
+tag: tutorials
+permalink: /tags/tutorials/
 ---

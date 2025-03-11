@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/custom-styles.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/tag-styles.css">
 
 <div class="tag-page">
   <h1 class="tag-title">{{ page.tag }}</h1>
@@ -10,7 +12,7 @@ layout: default
     {% if tag_data.description %}
     <p>{{ tag_data.description }}</p>
     {% else %}
-    <p>All posts tagged with <span class="highlighted-tag">{{ page.tag }}</span></p>
+    <p>Posts tagged with <span class="highlighted-tag">{{ page.tag }}</span></p>
     {% endif %}
   </div>
 
@@ -34,6 +36,7 @@ layout: default
   </ul>
 
   <div class="all-tags">
+    <p><a href="{{ site.baseurl }}/" class="home-link">← Back to Home</a></p>
     <p>Browse all tags:</p>
     <div class="tag-cloud">
       {% assign all_tags = "" | split: "" %}
@@ -50,3 +53,4 @@ layout: default
     </div>
   </div>
 </div>
+
