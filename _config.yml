@@ -31,6 +31,7 @@ collections:
 minima:
   skin: dark
 
-# Add to your existing _config.yml
 header_pages:
-  # Leave this empty or only include specific pages you want in the header
+
+markdown: kramdown
+highlighter: rouge

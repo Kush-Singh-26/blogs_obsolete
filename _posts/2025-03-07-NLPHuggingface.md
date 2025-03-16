@@ -2,7 +2,7 @@
 layout: post
 title: "NLP Hugging Face"
 date: 2025-03-07
-tags: [data-science, machine-learning, kaggle, tutorials]
+tags: [NLP]
 ---
 # 🤗 Tranformers
 

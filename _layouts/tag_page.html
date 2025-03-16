@@ -5,6 +5,10 @@ layout: default
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/tag-styles.css">
 
 <div class="tag-page">
+  <div style="text-align: left; margin-bottom: 20px;">
+    <a href="{{ site.baseurl }}/" class="home-link" style="display: inline-block; padding: 8px 16px 4px 16px; background-color: #1a73e8; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">← Back to Home</a>
+  </div>
+
   <h1 class="tag-title">{{ page.tag }}</h1>
   
   <div class="tag-description">
@@ -17,7 +21,7 @@ layout: default
   </div>
 
   <ul class="post-list">
-    {% assign filtered_posts = site.posts | where_exp: "post", "post.tags contains page.tag" %}
+    {% assign filtered_posts = site.posts | where_exp: "post", "post.tags contains page.tag" | sort: "title" %}
     {% for post in filtered_posts %}
     <li>
       <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
@@ -36,7 +40,6 @@ layout: default
   </ul>
 
   <div class="all-tags">
-    <p><a href="{{ site.baseurl }}/" class="home-link">← Back to Home</a></p>
     <p>Browse all tags:</p>
     <div class="tag-cloud">
       {% assign all_tags = "" | split: "" %}
@@ -53,4 +56,3 @@ layout: default
     </div>
   </div>
 </div>
-
