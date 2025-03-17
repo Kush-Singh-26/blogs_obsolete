@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "1.OpenCV Images"
+title: "1. OpenCV Images"
 date: 2025-03-15
 tags: [OpenCV]
 ---

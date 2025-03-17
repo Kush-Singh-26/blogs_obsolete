@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2.OpenCV Basic Image Manipulation"
+title: "2. OpenCV Basic Image Manipulation"
 date: 2025-03-15
 tags: [OpenCV]
 ---

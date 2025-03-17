@@ -11,7 +11,7 @@ tags: [Neural-Net]
 
 ## Preprocessing techniques :
 
-### 1. Standardization
+### 1. Standardization (Z-score Normalization)
 -  Tranforming / centering input features (data) so that they have :
     - mean (μ) = 0
     - standard deviation (σ<sup>2</sup>) = 1
