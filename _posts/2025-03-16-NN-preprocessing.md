@@ -19,7 +19,6 @@ tags: [Neural-Net]
 - $$ X' = \frac{X-μ}{σ} $$
     - X = original feature data
     - X' = Standardized feature
-    - also called _Z-score Standardization_
 
 - PyTorch implementation :
 
