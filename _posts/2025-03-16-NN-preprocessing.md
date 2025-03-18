@@ -14,7 +14,7 @@ tags: [Neural-Net]
 ### 1. Standardization (Z-score Normalization)
 -  Tranforming / centering input features (data) so that they have :
     - mean (μ) = 0
-    - standard deviation (σ<sup>2</sup>) = 1
+    - standard deviation (σ) = 1
 
 - $$ X' = \frac{X-μ}{σ} $$
     - X = original feature data
@@ -50,8 +50,8 @@ print(standardized_data)
 import torchvision.transforms as transforms
 from PIL import Image # Library for image manipulation
 
-tranform = transforms.Compose([
-    transforms.ToTensor(), # convert the data to pytorch tensors
+transform = transforms.Compose([
+    transforms.ToTensor(), # convert the data (image) to pytorch tensors
     transforms.Normalize(mean=[0.5], std=[0.5]) # scale to [-1, -1]
 
     image = Image.open("img.jpg")
