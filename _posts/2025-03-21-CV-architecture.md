@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "1.CNN: Architecture"
+title: "1.Computer Vision: Architecture"
 date: 2025-03-21
 tags: [Computer Vision]
 ---
@@ -249,7 +249,7 @@ Epoch [20/20], Loss: 0.0004
 
 > The full python code can be accessed [here](https://github.com/Kush-Singh-26/Learning-Pytorch/blob/main/CNN.py)
 
-> Colab Notebook which shows the all the steps (including visualization) and trained on GPU can be accessed [here](https://github.com/Kush-Singh-26/Learning-Pytorch/blob/main/MNIST_CNN.ipynb)
+> Colab Notebook of the above code can be accessed [here](https://github.com/Kush-Singh-26/Learning-Pytorch/blob/main/MNIST_CNN.ipynb)
 
 > Trained model parameters can be accessed [here](https://github.com/Kush-Singh-26/Learning-Pytorch/blob/main/mnist_cnn.pth)
 
