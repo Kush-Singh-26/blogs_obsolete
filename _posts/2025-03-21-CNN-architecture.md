@@ -2,7 +2,7 @@
 layout: post
 title: "1.CNN: Architecture"
 date: 2025-03-21
-tags: [CNNs]
+tags: [Computer Vision]
 ---
 
 ## Architecture
@@ -18,11 +18,16 @@ tags: [CNNs]
 - This layer applies the filters to the input image, **extracting essential features** such as edges, textures, and patterns. 
 -  Mathematical formula of convolution :
     - $$ O(x,y) = \sum_{c=0}^{C-1} \sum_{i = 0}^{K-1} \sum_{j = 0}^{K-1} W_c(i,j) \cdot I_c(x+i, y+j) $$
-        - `O(i,j)` is the output feature map at position (x,y).
-        - `I(x+i, y+j)` is Input image's or the previous feature map's pixel values.
-        - `W(x,y)` is the filter of size `(K,K)`.
+        - `O(x,y)` is the output feature map at position (x,y).
+        - `I(x+i, y+j)` is the input feature map or image  pixel at channel c, and spatial location `(x+i, y+j)`.
+        - `W_c(x,y)` is the filter of size `(K,K)`, for input channel c.
         - `K` is the size of the kernel. 
         - `c` is the number of input channels.
+
+        - The 3 summations iterate over :
+            1. c = 0 to C-1 (input channels).
+            2. i = 0 to K-1 (kernel height).
+            3. j = 0 to K-1 (kernel width).
 
 - Each layer has _C_ slices.
     - _C_ : the number of input channels.
@@ -166,7 +171,11 @@ This leads to CNNs to having a smaller number of parameters.
 # PyTorch Implementation
 
 - Implementation of a simple CNN model is similar to that of the MLP model ([here](https://kush-singh-26.github.io/blogs/2025/03/17/NN-MLP.html)).
-- ONly thing different is the definition of the model.
+- Only thing different is the definition of the model.
+
+![Image]({{"/images/CNN6.png",  | relative_url }}){:width="700" height="300"}
+
+All the layers in the CNN are modelled around this image.
 
 ```python
 class CNN(nn.Module):
@@ -192,7 +201,19 @@ class CNN(nn.Module):
 
         return output
 ```
+- `import torch.nn.functional as F`
 
+- `F.max_pool2d(c1, kernel_size=2, stride=(2,2))`
+    -  This performs maxpool operation.
+- `nn.Conv2d(in_channels=1, out_channels=6, kernel_size=5)`
+    - This is used to perform convolution process.
+
+- `torch.flatten(s4,1)` or `torch.flatten(torch.flatten(s4, start_dim=1)`
+    - `s4` is a 4D tensor with shape `(batch_size, channels, height, width)` or `(N, C, H, W)`
+    - `start_dim=1` : function will flatten the tensor **starting from `dim=1` onwards**.
+        - **preserves the first dimension**.
+        - **flattens all remaining dimensions (C, H, W) into a single dimension**.
+    - This function flattens the tensor `s4` starting from dimension 1 onwards, converting a multi-dimensional tensor into a 1D vector per batch instance.
 
 - Trained the model using
     - `criterion = nn.CrossEntropyLoss()`
