@@ -33,11 +33,11 @@ def standardize(data):
 data = torch.tensor([[1.0, 2.0], [2.0, 3.0], [3.0, 4.0]])
 standardized_data = standardize(data)
 print(standardized_data)
-
+```
 
 - Use case : data with Gaussian distribution
 - Best for : Linear models, Neural Networks
-```
+
 ### 2. Normalize
 - transforms / scales data to a fixed range between 0 and 1 (or -1 and 1)
 

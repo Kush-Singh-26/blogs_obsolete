@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "1. OpenCV Images"
+title: "1. OpenCV: Images"
 date: 2025-03-15
 tags: [OpenCV]
 ---
@@ -91,3 +91,5 @@ imgMerged = cv2.merge((b, g, r))
         - `img` : image or images to be saved
         - `filname` : path
 - saves the image to the specified file
+
+> Collab Notebook [here](https://github.com/Kush-Singh-26/Learning-Opencv/blob/main/OpenCV_1.ipynb) 

@@ -12,3 +12,6 @@
 
 - name: Neural-Net
   description: Basics of Neural Nets and implmentation using PyTorch 
+
+- name: CNNs
+  description: Convolutional Neural Networks

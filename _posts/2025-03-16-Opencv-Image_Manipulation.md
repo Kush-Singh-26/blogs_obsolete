@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2. OpenCV Basic Image Manipulation"
+title: "2. OpenCV: Basic Image Manipulation"
 date: 2025-03-15
 tags: [OpenCV]
 ---
@@ -65,3 +65,5 @@ img_resized = cv2.resize(img, dsize=dim, interpolation=cv2.INTER_AREA)
         - `Negative value` (for example, -1) means flipping around both axes.
 
 - `img_flip = cv2.flip(img, 1)`
+
+> Collab Notebook [here](https://github.com/Kush-Singh-26/Learning-Opencv/blob/main/OpenCV_2_Basic_image_manipulation.ipynb) 
