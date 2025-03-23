@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2.Computer Vision: Pre trained Models"
+title: "2. Computer Vision: Pre trained Models"
 date: 2025-03-22
 tags: [Computer Vision]
 ---

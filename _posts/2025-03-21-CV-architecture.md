@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "1.Computer Vision: Architecture"
+title: "1. Computer Vision: Architecture"
 date: 2025-03-21
 tags: [Computer Vision]
 ---

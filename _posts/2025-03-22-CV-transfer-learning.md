@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "3.Computer Vision: Transfer Learning"
+title: "3. Computer Vision: Transfer Learning"
 date: 2025-03-22
 tags: [Computer Vision]
 ---
