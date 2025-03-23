@@ -37,6 +37,9 @@ model.eval()
 
     - if the model was used for training then `model.train()`.
 
+> `model = models.resnet50(weights='DEFAULT')` <br>
+It is the syntax for newer PyTorch versions.
+
 ### 2. Preprocess the Input Image
 
 ```python
