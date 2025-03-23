@@ -18,32 +18,74 @@
   <link rel="icon" type="image/png" href="https://kush-singh-26.github.io/blogs/favicon.png">
 </head>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll("pre code").forEach((codeBlock) => {
-        const button = document.createElement("button");
-        button.innerText = "Copy";
-        button.classList.add("copy-button");
-
-        button.addEventListener("click", async () => {
-            try {
-                await navigator.clipboard.writeText(codeBlock.innerText);
-                button.innerText = "Copied!";
-                setTimeout(() => (button.innerText = "Copy"), 2000);
-            } catch (err) {
-                console.error("Failed to copy: ", err);
-            }
-        });
-
-        const pre = codeBlock.parentNode;
-        pre.style.position = "relative";
-        pre.appendChild(button);
-    });
-});
-</script>
-
-<style>
-  body {
-    /* background-color: #282a36 !important; */
-    color: #f8f8f2 !important;
+  document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll("pre code").forEach((codeBlock) => {
+          const button = document.createElement("button");
+          button.innerText = "Copy";
+          button.classList.add("copy-button");
+  
+          button.addEventListener("click", async () => {
+              try {
+                  await navigator.clipboard.writeText(codeBlock.innerText);
+                  button.innerText = "Copied!";
+                  setTimeout(() => (button.innerText = "Copy"), 2000);
+              } catch (err) {
+                  console.error("Failed to copy: ", err);
+              }
+          });
+  
+          const pre = codeBlock.parentNode;
+          pre.style.position = "relative";
+          pre.insertBefore(button, codeBlock);
+      });
+  });
+  </script>
+  
+  <style>
+  /* Fix code block and copy button styling */
+  pre {
+      position: relative;
+      overflow: auto;
+      z-index: 1; /* Ensure code blocks don't overlap with header */
   }
-</style>
+  
+  .copy-button {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: #44475a;
+      color: #f8f8f2;
+      border: none;
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-size: 12px;
+      cursor: pointer;
+      z-index: 2;
+  }
+  
+  .copy-button:hover {
+      background: #6272a4;
+  }
+  
+  /* Ensure proper z-index for header */
+  header, .site-header {
+      position: relative;
+      z-index: 10; /* Higher z-index than code blocks */
+  }
+  
+  /* Fix scrolling behavior for code blocks */
+  pre code {
+      display: block;
+      padding: 16px;
+      padding-top: 30px; /* Add extra padding at top to avoid button overlap */
+      overflow: auto;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+      .copy-button {
+          top: 5px;
+          right: 5px;
+      }
+  }
+  </style>
