@@ -156,6 +156,10 @@ def train_and_validate(model, loss_fn, optimizer, epochs):
 
 --- 
 
+> Colab Notebook with the complete implementation can be accessed [here](https://github.com/Kush-Singh-26/Learning-Pytorch/blob/main/transfer_learning.ipynb)
+
+---
+
 Therefore **transfer learning** / **feature extraction** is performed by retaining most of the pre-trained model and only replace the final classification layer to classify a smaller subset of categories (e.g., a few out of ImageNet’s 1,000 classes).
 <br><br>
 The earlier layers (convolutional layers) remain frozen since they already learned general feature representations (edges, textures, shapes, etc.).
