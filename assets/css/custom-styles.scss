@@ -18,7 +18,9 @@
   --yellow: #ebcb8b;
   --purple: #b48ead;
 }
-
+.page-content {
+  padding-top: 25px !important; 
+}
 /* Global styles */
 body {
   background-color: var(--background) !important;
