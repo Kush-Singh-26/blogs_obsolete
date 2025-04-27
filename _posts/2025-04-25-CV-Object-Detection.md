@@ -110,6 +110,8 @@ tags: [Computer Vision]
 - Pass to Non-Maximum Suppression (NMS) to remove duplicates
     - suppressing the weaker bounding boxes based on their overlap with stronger ones (usually using the Intersection over Union, IoU, metric).
 
+---
+
 ## Fast R-CNN
 
 ### Problems with R-CNN
@@ -236,6 +238,8 @@ $$ L(p,u,t,v) = L_{cls}(p,u) + \lambda[u \geq 1] L_{loc}(t,v) $$
 - ##### Localisation Loss 
     - Smooth L1 loss applied on the bounding box coordinates.
     - only computed when RoI is foreground.
+
+---
 
 ## Faster R-CNN
 
@@ -482,7 +486,7 @@ def object_detection(img_path, threshold):
 ### Performing Object detection
 
 ```python
-object_detection('people.jpg', threshold=0.8)
+object_detection('path', threshold=0.8)
 ```
 
 ---
