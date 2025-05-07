@@ -48,6 +48,7 @@ tags: [Computer Vision]
 ### For Inference :
 
 - The trained gram matrix is used for getting the style.
+- Thus, only the style loss if used.
 
 > > Colab Notebook with the complete implementation can be accessed [here](https://github.com/Kush-Singh-26/Neural-Style-Transfer/blob/main/Neural_Style_Transfer.ipynb)
 
