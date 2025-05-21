@@ -118,7 +118,7 @@ def preprocess_text(text):
     stop_words = set(stopwords.words('english'))
     tokens = [token for token in tokens if token not in stop_words] # remove stopwords
 
-    lemmatizer = WordNetLemmtizer()
+    lemmatizer = WordNetLemmatizer()
     tokens = [lemmatizer.lemmatize(token) for token in tokens]
 
     return tokens
@@ -249,6 +249,33 @@ vocab.numericalize(["hello", "new", "world"]) # output = [2, 1, 3]
 - `<UNK>` :
     - **Out-of-Vocabulary (OOV)** words are those which are encountered in val/test set but not present in train set.
     - These words are mapped to <UNK> token 
+
+---
+
+### Using `build_vocab_from_iterator`
+
+- Generate the tokens :
+
+```python
+# Step 1: Read and preprocess
+preprocessed_texts = []
+with open('data.txt', 'r', encoding='utf-8') as f:
+    for line in f:
+        line = line.strip()
+        if line:
+            tokens = preprocess_text(line)
+            preprocessed_texts.append(tokens)
+
+```
+
+- Buid vocabulary
+
+```python
+from torchtext.vocab import build_vocab_from_iterator
+
+vocab = build_vocab_from_iterator(preprocessed_texts, specials=['<PAD>', '<UNK>'])
+vocab.set_default_index(vocab['<UNK>'])
+```
 
 ---
 

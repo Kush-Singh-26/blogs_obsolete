@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "4. Computer Vision: Fine Tuniing Models"
+title: "4. Computer Vision: Fine Tuning Models"
 date: 2025-04-22
 tags: [Computer Vision]
 ---
