@@ -27,7 +27,7 @@ tags: [Computer Vision]
     1. Region proposal
     2. Onject Classification
 
-- ![Image]({{"/images/OD1.png",  | relative_url }})
+- ![Image]({{"/images/OD1.png"  | relative_url }})
 
 
 - R-CNN workflow consists of 4 steps :
@@ -52,7 +52,7 @@ tags: [Computer Vision]
         - adjusts the coordinates of the proposed regions to better align with the actual object boundaries.       
     <br>
 
-- ![Image]({{"/images/OD2.png",  | relative_url }})
+- ![Image]({{"/images/OD2.png"  | relative_url }})
 
 ### Mathematics of R-CNN
 
@@ -143,7 +143,7 @@ tags: [Computer Vision]
 - To process these proposals using fully connected layers, they need to be converted into fixed (uniform) sizes (eg. 7 x 7).
 - RoI Pooling fixes this mismatch by "compressing" each RoI into a fixed-size grid, while preserving spatial information.
 
-- ![Image]({{"/images/OD3.png",  | relative_url }})
+- ![Image]({{"/images/OD3.png"  | relative_url }})
 
 - #### Steps of RoI Pooling
     - **Given :**
@@ -204,7 +204,7 @@ tags: [Computer Vision]
         - $$ output_{i,j} = max $$
         - $$ \text{output}_{i,j} = \max_{(x, y) \in \text{bin}(i, j)} \text{features}(x, y) $$
 
-- ![Image]({{"/images/OD4.png",  | relative_url }})
+- ![Image]({{"/images/OD4.png"  | relative_url }})
 
 - The 7×7 pooled feature map (from each RoI) is flattened into a 1D vector.
 - The flattened vector is passed through fully connected layers.
@@ -263,7 +263,7 @@ $$ L(p,u,t,v) = L_{cls}(p,u) + \lambda[u \geq 1] L_{loc}(t,v) $$
         - *Class scores* (object category)
         - *Bounding box refinements*
 
-- ![Image]({{"/images/OD7.png",  | relative_url }}){:width="450" height="450"}
+- ![Image]({{"/images/OD7.png"  | relative_url }}){:width="450" height="450"}
 
 ### Region Proposal Networks (RPN) 
 
@@ -294,7 +294,7 @@ $$ L(p,u,t,v) = L_{cls}(p,u) + \lambda[u \geq 1] L_{loc}(t,v) $$
         - Anchors whose IoU < 0.3 with all ground-truth boxes
 
 > IoU = Intersection over Union
-- ![Image]({{"/images/OD5.png",  | relative_url }}){:width="450" height="250"}
+- ![Image]({{"/images/OD5.png"  | relative_url }}){:width="450" height="250"}
 - It is an evaluation metric used to measure the accuracy of an object detector on a particular dataset.
 
 ###### RPN Loss
@@ -315,7 +315,7 @@ $$ L(p_i,t_i) = \frac{1}{N_{cls}} \sum_i L_{cls}(p_i,p_i ^*) + \lambda \frac{1}{
 
 ---
 
-- ![Image]({{"/images/OD6.png",  | relative_url }}){:width="450" height="250"}
+- ![Image]({{"/images/OD6.png"  | relative_url }}){:width="450" height="250"}
 
 - Input image is passed through a CNN backbone and a feature map is obtained.
 - A small sliding window (3x3) slides over every spatial location.
@@ -343,7 +343,7 @@ $$ L(p_i,t_i) = \frac{1}{N_{cls}} \sum_i L_{cls}(p_i,p_i ^*) + \lambda \frac{1}{
 
 - Rest same as Fast R-CNN
 
-- ![Image]({{"/images/OD8.png",  | relative_url }}){:width="700" height="250"}
+- ![Image]({{"/images/OD8.png"  | relative_url }}){:width="700" height="250"}
 
 --- 
 

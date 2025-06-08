@@ -38,7 +38,7 @@ tags: [Computer Vision]
 
 - FCN = *Fully Convolutional Networks*
 
-- ![Image]({{"/images/SS1.png",  | relative_url }}){:width="700" height="350"}
+- ![Image]({{"/images/SS1.png"  | relative_url }}){:width="700" height="350"}
 
 ```python
 fcn = models.segmentation.fcn_resnet101(

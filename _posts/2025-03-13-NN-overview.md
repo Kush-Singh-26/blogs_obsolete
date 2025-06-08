@@ -11,7 +11,7 @@ tags: [Neural-Net]
 
 ## Architecture of a simple Neural Net or Multi-Layer Perceptron (MLP)
 - It consists of 3 layers   
-![Image]({{"/images/NN1.png",  | relative_url }}){:width="500" height="350"}
+![Image]({{"/images/NN1.png"  | relative_url }}){:width="500" height="350"}
 
 ### Input Layer
 - This layer receives raw input features.

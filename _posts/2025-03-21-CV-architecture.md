@@ -37,7 +37,7 @@ tags: [Computer Vision]
 - Slide the filter over the entire input to repeat this process for all spatial positions.
 - Each filter produces one output channel, so if we apply M filters, we obtain M output channels.
 
-![Image]({{"/images/CNN1.png",  | relative_url }}){:width="1000" height="325"}
+![Image]({{"/images/CNN1.png"  | relative_url }}){:width="1000" height="325"}
 
 - This convolution process is also called **cross-correlation** in CNNs.
 
@@ -79,7 +79,7 @@ tags: [Computer Vision]
 > **A 3×3 filter with dilation=2 behaves like a 5×5 filter but with fewer parameters.**
 
 
-![Image]({{"/images/CNN2.png",  | relative_url }}){:width="700" height="300"}
+![Image]({{"/images/CNN2.png"  | relative_url }}){:width="700" height="300"}
 
 ### 5 `in_channels` & `out_channels`
 -  `in_channels` : Number of channels in the input image
@@ -104,7 +104,7 @@ $$ O = \frac{W-F+2P}{S} $$
     - Without an activation function, stacking multiple convolutional layers would still result in a linear transformation, limiting the network’s ability to learn complex features.
     - Thus, non-linearity needs to be introduced for the model to capture more abstract and high-level features.
 
-![Image]({{"/images/CNN3.png",  | relative_url }}){:width="700" height="300"}
+![Image]({{"/images/CNN3.png"  | relative_url }}){:width="700" height="300"}
 
 ---
 
@@ -118,7 +118,7 @@ $$ O = \frac{W-F+2P}{S} $$
 - The portion of the input image that a specific neuron in a convolutional layer "looks at" or is connected to, influencing its output.
 
 
-- ![Image]({{"/images/CNN4.png",  | relative_url }}){:width="650" height="250"}
+- ![Image]({{"/images/CNN4.png"  | relative_url }}){:width="650" height="250"}
 
 ### 3. Local Connectivity
 - Unlike fully connected networks, each neuron in a CNN is only connected to a small local region (receptive field) of the input.
@@ -145,7 +145,7 @@ This leads to CNNs to having a smaller number of parameters.
 - Makes CNNs translation invariant (small shifts in input don’t affect results).
 
 
-- ![Image]({{"/images/CNN5.png",  | relative_url }}){:width="600" height="200"}
+- ![Image]({{"/images/CNN5.png"  | relative_url }}){:width="600" height="200"}
 
 - In PyTorch : `MaxPool2d`
     - Same parameters as `conv2d` discussed above.
@@ -173,7 +173,7 @@ This leads to CNNs to having a smaller number of parameters.
 - Implementation of a simple CNN model is similar to that of the MLP model ([here](https://kush-singh-26.github.io/blogs/2025/03/17/NN-MLP.html)).
 - Only thing different is the definition of the model.
 
-![Image]({{"/images/CNN6.png",  | relative_url }}){:width="700" height="300"}
+![Image]({{"/images/CNN6.png"  | relative_url }}){:width="700" height="300"}
 
 All the layers in the CNN are modelled around this image.
 

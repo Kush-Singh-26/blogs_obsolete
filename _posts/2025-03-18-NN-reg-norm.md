@@ -18,7 +18,7 @@ tags: [Neural-Net]
 - This leads to model performing poorly on test data / unseen data.
 - The model is not able to _generalize_.
 
-![Image]({{"/images/NN9.png",  | relative_url }}){:width="850", height="400"}
+![Image]({{"/images/NN9.png"  | relative_url }}){:width="850", height="400"}
 
 # Regularization
 

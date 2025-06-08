@@ -386,7 +386,7 @@ dataloader = DataLoader(dataset, batch_size=32, shuffle=True, collate_fn=collate
 - Each token index passes through this embedding layer to produce a dense vector.
 - The words in a sentence are first converted to indices via the vocabulary, then the embedding layer outputs a vector for each index. 
 
-- ![Image]({{"/images/NLP1.png",  | relative_url }}){:width="600" height="350"}
+- ![Image]({{"/images/NLP1.png"  | relative_url }}){:width="600" height="350"}
 
 ```python
 embedding = nn.Embedding(num_embeddings = len(vocab), embedding_dim=100, padding_idx=vocab['<PAD>'])

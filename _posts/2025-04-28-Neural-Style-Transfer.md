@@ -35,7 +35,7 @@ tags: [Computer Vision]
     - Normalize the matrix.    
 <br>
 
-- ![Image]({{"/images/NST1.png",  | relative_url }}){:width="750" height="300"}
+- ![Image]({{"/images/NST1.png"  | relative_url }}){:width="750" height="300"}
 
 
 - The Gram matrix captures the intensity and co-occurrence of features, not their locations.

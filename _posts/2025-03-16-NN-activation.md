@@ -10,7 +10,7 @@ tags: [Neural-Net]
 - This allows to model complex relatioships in data.
 
 ## Why activation functions are needed ?
-![Image]({{"/images/NN2.png",  | relative_url }})
+![Image]({{"/images/NN2.png"  | relative_url }})
 [source](https://sanjayasubedi.com.np/deeplearning/why-non-linear-in-neural-networks/)
 
 - The data on left can be modelled by using a linear function.
@@ -207,4 +207,4 @@ output = softmax(torch.tensor([[1.0, 2.0, 3.0]]))
 Choosing the right activation function is crucial for model performance and convergence stability.
 
 > Plot of some of the activation functions
-![Image]({{"/images/NN3.png",  | relative_url }})
+![Image]({{"/images/NN3.png"  | relative_url }})

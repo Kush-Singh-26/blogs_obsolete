@@ -37,7 +37,7 @@ Classification | What class is it? | $$ p \in \mathbb{R}^{K+1} $$ (K classes + b
 Bounding box regression | Where is it exactly? | $$ t \in \mathbb{R}^{4K} $$ (4 for each class) | Smooth L1 loss
 Mask prediction | Pixel-wise object mask | Binary mask of size m×mm \times mm×m per class | Per-pixel binary cross-entropy loss
 
-- ![Image]({{"/images/IS3.png",  | relative_url }}){:width="750" height="350"}
+- ![Image]({{"/images/IS3.png"  | relative_url }}){:width="750" height="350"}
 
 ---
 
@@ -81,7 +81,7 @@ Mask prediction | Pixel-wise object mask | Binary mask of size m×mm \times mm×
 
 - Calculate the center of each of the bins :
 
-- ![Image]({{"/images/IS1.png",  | relative_url }}){:width="450" height="350"}
+- ![Image]({{"/images/IS1.png"  | relative_url }}){:width="450" height="350"}
 
 - Each of the red points are the center of their respective bins.
 
@@ -119,7 +119,7 @@ Mask prediction | Pixel-wise object mask | Binary mask of size m×mm \times mm×
 
 > - If multiple were sampled per bin then take their average or max to summarize into a single feature value for that bin. 
 
-- ![Image]({{"/images/IS2.png",  | relative_url }})
+- ![Image]({{"/images/IS2.png"  | relative_url }})
     - dashed grid  = feature map
     - solid lines = RoI with 2x2 bins
     - 4 sampling points in each bin

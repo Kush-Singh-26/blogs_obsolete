@@ -20,7 +20,7 @@ tags: [Computer Vision]
 - Modify the classifier to suit new dataset.
 - The pre-trained ImageNet Feature Extractor has learned valuable features for detecting many different object types. 
 - Assume such features are general enough that we only need to re-train the classifier portion of the network.
-- ![Image]({{"/images/TL1.png",  | relative_url }})
+- ![Image]({{"/images/TL1.png"  | relative_url }})
 
 
 ## Some image trasformations

@@ -108,7 +108,7 @@ import torch.nn as nn
 - The gradient of a function always points in the direction of the steepest ascent (increase in function value).
 - In gradient descent, we move in the opposite direction of the gradient to minimize the function.
 
-![Image]({{"/images/NN4.png",  | relative_url }}){:width="450" height="350"}
+![Image]({{"/images/NN4.png"  | relative_url }}){:width="450" height="350"}
 
 > Calculations:  
 > $$ L(W) = W^2 $$  
@@ -233,13 +233,13 @@ for epoch in range(100):
     
 > This causes the optimization path to look like a zig-zag, wasting a lot of time oscillating instead of moving efficiently toward the minimum.
 
-![Image]({{"/images/NN5.png",  | relative_url }})
+![Image]({{"/images/NN5.png"  | relative_url }})
 
 - If the loss function has local minima or saddle point
 
 > Since that point has zero gradient, the gradient descent will stop and the optimizer gets stuck, in the case of local minima. 
 
-![Image]({{"/images/NN6.png",  | relative_url }}){:width="450" height="250"}
+![Image]({{"/images/NN6.png"  | relative_url }}){:width="450" height="250"}
 
 ### 7. SGD with Momentum
 
@@ -299,7 +299,7 @@ PyTorch implementation
 `optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)`
 
 ### 8. Nesterov Momentum
-![Image]({{"/images/NN7.png",  | relative_url }}){:width="650" height="250"}
+![Image]({{"/images/NN7.png"  | relative_url }}){:width="650" height="250"}
 
 - Instead of computing the gradient at the current position, Nesterov Momentum "looks ahead" by first making a partial update using the momentum term and then computing the gradient at this "lookahead" position.
 
