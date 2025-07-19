@@ -5,7 +5,7 @@ date: 2025-06-22
 tags: [NLP]
 ---
 
-# Attention Is All You Need Implementation
+# Attention Is All You Need Deep Dive
 
 Transformer architecture was introduced in the paper **"Attention is All You Need"** by [Vaswani et al.](https://arxiv.org/pdf/1706.03762) in the year 2017. Transformers allowed to understand the relationships between all parts of an input parallelly. This allowed much faster training, better performance, and superior handling of complex tasks like language translation, summarization, and text generation than previous models/architectures like RNNs or LSTMs.
 <br>
@@ -367,11 +367,13 @@ $$ \text{MHA Output} = Concat(head_1, \cdots, head_8) W^O$$
 
 $$
 \begin{array}{rl}
-Q &= QW^Q \\
-K &= KW^K  \\
-V &= VW^V 
+Q' &= QW^Q \\
+K' &= KW^K  \\
+V' &= VW^V 
 \end{array}
 $$
+
+> From here on $Q',K',V'$ are written as $Q,K,V$
 
 - Each of these 3 tensors (matrices) are of shape : `[32, 50, 512]`.
 
@@ -471,8 +473,8 @@ Head 4 : [Token B1_data, Token B2_data, Token B3_data]
 
 - The final output of the MHA layer which will be the input of the next layer (FFN) needs to be of shape `[batch_size, seq_len, d_model]`.
 - To convert the current tensor :
-    a. Reverse the transpose.
-    b. Concatenate the Heads.
+    1. Reverse the transpose.
+    2. Concatenate the Heads.
 
 - After traspose(1,2) shape will become : `[batch_size, seq_len, num_heads, dim_head]` 
     - (`[32, 8, 50, 64]` -> `[32, 50, 8, 64]`).
@@ -506,6 +508,7 @@ It is used in the **decoder block** of the transformer model. It is used to allo
 - This is enforced using **mask**.
 
 - The *mask* or **look-ahead mask** is applied inside each attention head, **before softmax step**.
+- This mask is also called **causal mask** and **triangular mask**.
 
 > In a given query, at position $i$, we want to prevent the model from attending to any key ($K$ value) at a position $j$ > $i$.
 
@@ -782,6 +785,26 @@ pe_matrix = pe(max_seq_len, d_model)
 ```
 
 ![Image]({{"/images/Transformer11.png"  | relative_url }}){:width="650" height="400"}
+
+### Practical Implementation
+
+In the above code the `numpy` line : `div_term = np.exp(np.arrange(0, d_model, 2).astype(np.float32) * -(np.log(10000.0) / d_model))` is written in `PyTorch` like :
+
+```python
+div_term = torch.exp(torch.arange(0, d_model, 2).float() * (-math.log(10000.0) / d_model)) # (d_model / 2)
+```
+
+- The denominator in the paper is : 
+
+$$ 10000^{\frac{2i}{d_{model}}} $$
+
+It is same as : 
+
+$$ \exp\left ( -\ln{(10000)} \cdot \frac{2i}{d_{model}} \right ) $$
+
+- Using `exp` and `log` is more stable for floating point calculations for very large or small numbers.
+- `torch.exp()` is vectorized and optimized.
+
 
 ---
 
