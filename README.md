@@ -1,7 +1,7 @@
 # Blogs
 
 **This repo is obsolte.**
-**The blogs have been moved to new repository []().**
+**The blogs have been moved to new repository [Blogs](https://kush-singh-26.github.io/blogs/).**
 
 ---
 
