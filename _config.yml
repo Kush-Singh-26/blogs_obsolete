@@ -6,9 +6,9 @@ social_links:
   - name: Profile
     url: "https://kush-singh-26.github.io/"
   - name: Blogs Repo
-    url: "https://github.com/Kush-Singh-26/blogs"
+    url: "https://github.com/Kush-Singh-26/blogs_obsolete"
 
-baseurl: "/blogs"           # Set to the subdirectory if applicable
+baseurl: "/blogs_obsolete"           # Set to the subdirectory if applicable
 url: "https://kush-singh-26.github.io"  # Root URL of your GitHub Pages
 
 github_username: Kush-Singh-26
